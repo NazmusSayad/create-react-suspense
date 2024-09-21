@@ -14,14 +14,14 @@ export default function createReactSuspense<T = void>(promise?: Promise<T>) {
       throw promise
     }
 
-    return [promiseError, promiseData as Awaited<T>] as const
+    return [promiseData as Awaited<T>, promiseError as any] as const
   }
 
   function handleRootPromise() {
     return handlePromise(promise!)
   }
 
-  return (promise ? handleRootPromise() : handlePromise) as T extends void
+  return (promise ? handleRootPromise : handlePromise) as T extends void
     ? typeof handlePromise
     : typeof handleRootPromise
 }
