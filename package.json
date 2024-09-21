@@ -4,7 +4,8 @@
   "scripts": {
     "dev": "npmize dev",
     "build": "npmize build",
-    "vite": "vite ./dev"
+    "vite": "vite ./dev",
+    "vite-build": "vite build ./dev"
   },
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
