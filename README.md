@@ -2,6 +2,10 @@
 
 `create-react-suspense` is a utility function that helps you handle promises in a way that integrates with React's Suspense mechanism. It allows you to create a function that can be called to handle a promise and return its result or error.
 
+### Demo https://create-react-suspense.vercel.app
+
+<br/>
+
 ## Installation
 
 ```bash
